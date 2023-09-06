@@ -1,0 +1,14 @@
+
+.post_container .post_title h1,
+.post_container .post_info .post_tag,
+.post_container .post_info .post_tag a,
+.post_container .post_info .post_date,
+.single_post_container .brand_container .inner_brand_container p,
+.single_brand_container .brand_name,
+.single_brand_container .brand_learn_more a,
+.post_container .post_source .dr_info .dr_name,
+.post_container .post_source .dr_info .dr_field,
+.post_container .post_source .dr_info .dr_booking a,
+.related_article_wrap h3 {
+    font-family: "Noto Sans TC", "Noto Sans SC", "ACaslonPro-Regular", "Microsoft Yahei", Helvetica, Arial, Sans-serif !important;
+}

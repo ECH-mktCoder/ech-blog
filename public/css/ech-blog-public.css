@@ -1,0 +1,287 @@
+
+.ech_blog_big_wrap {
+    width: 100%;    
+}
+
+.echb_page_anchor {
+    position: absolute;
+    top: -190px;
+}
+
+
+.ech_blog_big_wrap .ech_blog_filter_container {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container div {
+    display: inline-block;
+    margin-right: 7px;
+}
+.ech_blog_big_wrap .ech_blog_filter_container div:last-child {
+    margin-right: 0px;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container div.filter_search_btn {
+    border: 1px solid #000;
+    width: 100%;
+    height: 44px;
+    max-width: 100px;
+    text-align: center;
+    font-family: "FuturaPT-Book", Sans-serif;
+    font-weight: 400;
+    color: #000;
+    line-height: 44px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 15px;
+}
+.ech_blog_big_wrap .ech_blog_filter_container div.filter_search_btn:hover {
+    background-color: #02457a;
+    color: #fff;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container select {
+    -webkit-appearance: none;
+    height: 44px;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='grey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 10px;
+    line-height: 1.3em;
+    padding-right: 30px;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container .M_categories_filter_container {
+    display: none;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container .D_cate_filter {
+    font-family: "FuturaPT-Book",Sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 3px 7px;
+    margin: 0px 5px;
+    font-size: 15px;
+    line-height: 1.3em;
+    cursor: pointer;
+}
+.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container .D_cate_filter:first-child {
+    margin-left: 0px;
+}
+
+.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container .D_cate_filter.active {
+    border: 1px solid #192744;
+    border-radius: 3px;
+}
+
+
+.ech_blog_filter_container h4 {
+    text-transform: uppercase;
+    color: #000 !important;
+    font-size: 25px !important;
+    line-height: 1.3em !important;
+    letter-spacing: 1.3px !important;
+    font-weight: 400 !important;
+    font-family: "FuturaPT-Book",Sans-serif !important;
+}
+
+
+.ech_blog_container {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.all_posts_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.all_posts_container .single_blog_post_card {
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 70px;
+}
+
+.single_blog_post_card .post_thumb {
+    width: 100%;
+    overflow: hidden;
+}
+
+.single_blog_post_card img {
+    width: 100%;
+    height: 240px !important;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.single_blog_post_card img:hover 
+{
+    transform: scale(1.2);
+}
+
+.single_blog_post_card .post_title,
+.single_blog_post_card .post_title a {
+    font-size: 23px ;
+    line-height: 1.3em ;
+    letter-spacing: 1.3px ;
+    font-weight: 400 ;
+    font-family: "Optima-Regular",Sans-serif;
+    margin-top: 10px;
+}
+
+
+.single_blog_post_card .post_date {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    font-family: "FuturaPT-Book",Sans-serif;
+}
+
+
+.single_blog_post_card .post_brand,
+.single_blog_post_card .post_cate,
+.single_blog_post_card .post_cate a,
+.single_blog_post_card .post_tag,
+.single_blog_post_card .post_tag a {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    font-family: "FuturaPT-Book",Sans-serif;
+}
+
+
+@media(max-width: 1024px) {
+    .ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container {
+        display: none;
+    }
+    .ech_blog_big_wrap .ech_blog_filter_container .M_categories_filter_container {
+        display: inline-block;
+    }
+
+    .ech_blog_big_wrap .ech_blog_filter_container select,
+    .ech_blog_big_wrap .ech_blog_filter_container input[type=text] {
+        height: 40px;
+        width: 100% !important;
+    }
+    .ech_blog_big_wrap .ech_blog_filter_container input[type=text] {
+        padding: 0px 10px;
+    }
+
+    .ech_blog_big_wrap .ech_blog_filter_container .M_categories_filter_container {
+        width: 50%;
+        padding: 0px 3px;
+        margin-right: 0px;
+    }
+    .ech_blog_big_wrap .ech_blog_filter_container .M_categories_filter_container .categories_filter_M {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .ech_blog_big_wrap .ech_blog_filter_container .title_filter {
+        width: 50%;
+        padding: 0px 3px;
+        margin-right: 0px;
+    }
+    .ech_blog_big_wrap .ech_blog_filter_container div.filter_search_btn {
+        margin-top: 10px;
+        margin-left: 3px;
+        max-width: 98%;
+        
+    }
+} /* w1024 */
+
+
+@media(max-width: 876px) {
+    .all_posts_container .single_blog_post_card {
+        width: 30%; 
+    }
+} /* w876 */
+
+
+@media(max-width: 767px) {
+    
+}
+
+
+
+@media(max-width: 650px) {
+    .all_posts_container .single_blog_post_card {
+        width: 100%; 
+    }
+} /* w650 */
+
+
+/******* PAGINATION ********/
+
+.ech_blog_container .ech_blog_pagination {
+    width: 100%;
+    text-align: right;
+}
+
+
+.ech_blog_pagination  ul {
+    list-style: none;
+}
+
+.ech_blog_pagination  ul li {
+    display: inline-block;
+    padding: 0px 7px;
+}
+
+.ech_blog_pagination  ul li,
+.ech_blog_pagination  ul li a {
+    font-family: "FuturaPT-Book", Sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    text-decoration: none;
+}
+
+.ech_blog_pagination  ul li a:hover,
+.ech_blog_pagination  ul li.active {
+    color: #02457a;
+    text-decoration: underline;
+}
+
+/******* (END) PAGINATION ********/
+
+
+
+
+/************** LOADING ************/
+
+.ech_blog_container .loading_div {
+    width: 100%;
+    height: 380px;
+    display: none;
+}
+
+.ech_blog_container .loading_div p {
+    margin-bottom: 0px;
+    font-family: "FuturaPT-Book", Sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #666;
+}
+
+
+
+@media(max-width: 600px) {
+    .ech_blog_container .loading_div p {
+        font-size: 18px;
+    }
+} /* w600 */
+/************** (END)LOADING ************/

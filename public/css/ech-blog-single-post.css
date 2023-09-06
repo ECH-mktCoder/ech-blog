@@ -1,0 +1,447 @@
+
+
+/* set header bg*/
+/* div[data-elementor-type='header'] > .elementor-section {
+    background-color: #192744!important;
+  }
+   */
+  
+  
+  
+  /****** COMMON ****/
+  .hidden_b_w1024 {
+    display: block;
+  }
+  
+  .show_b_w1024 {
+    display: none;
+  }
+  
+  @media (max-width: 1024px) {
+    .hidden_b_w1024 {
+      display: none;
+    }
+  
+    .show_b_w1024 {
+      display: block;
+    }
+  }
+  
+  /****** (END)COMMON ****/
+  
+  .all_single_post_wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+  }
+  
+  .sp_breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .sp_breadcrumb div,
+  .sp_breadcrumb div a {
+    line-height: 1.2em;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-family: "Optima-Regular", Sans-serif;
+    font-size: 15px;
+    color: #000;
+  }
+  
+  .single_post_container {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .single_post_container .post_container {
+    width: 80%;
+    padding-right: 20px;
+  }
+  .single_post_container .post_container.full_width {
+    width: 100%;
+  }
+  
+  .content_main_img {
+    margin-top: 30px;
+  }
+  .content_main_img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .post_container .post_title h1 {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+    color: #000;
+  }
+  
+  .post_container .post_info {
+    padding: 10px 0px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .post_container .post_info .post_date {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    padding-right: 15px;
+  }
+  .post_container .post_info .post_tag {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    width: 70%;
+    padding-right: 15px;
+  }
+  .post_container .post_info .post_tag a {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+  }
+  .post_container .post_info .post_share {
+    width: 20%;
+    text-align: right;
+  }
+  .post_container .post_info .post_share a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .post_container .post_info .post_share a img {
+    width: 25px;
+    margin-left: 7px;
+    display: block;
+  }
+  
+  .post_container .content {
+    margin-top: 30px;
+  }
+  
+  .post_container .content .ECHB_p_section {
+    margin-bottom: 50px;
+  }
+  
+  .post_container .content .ECHB_p_section h2 {
+    font-size: 30px;
+    line-height: 1.2em;
+      margin-bottom: 20px;
+  }
+  
+  .post_container .content .ECHB_p_section h3,
+  .post_container .content .ECHB_p_section h4 {
+      margin-bottom: 20px;
+  }
+  
+  .post_container .content .ECHB_p_section p {
+    /* margin-bottom: 20px;*/
+      margin-bottom: 0px;
+  }
+  
+  .post_container .content .ECHB_p_section img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  .post_container .post_source {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .post_container .post_source .dr_source {
+    margin-bottom: 30px;
+    display: flex;
+  }
+  .post_container .post_source .dr_source:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .post_container .post_source .dr_profile {
+    max-width: 120px;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+  }
+  .post_container .post_source .dr_profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .post_container .post_source .dr_info {
+    padding-left: 10px;
+    vertical-align: top;
+    width: 80%;
+  }
+  
+  .post_container .post_source .dr_info .dr_name {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2em;
+    color: #02457a;
+  }
+  
+  .post_container .post_source .dr_info .dr_field {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .post_container .post_source .dr_info .dr_booking a {
+    max-width: 200px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .post_container .post_source .dr_info .dr_booking a:hover {
+    background-color: #192744;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .post_container .post_source div,
+  .post_container .post_source div a {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #666;
+  }
+  
+  
+  
+  /**** related posts ****/
+  .related_article_wrap {
+    width: 100%;
+  }
+  
+  .related_article_wrap h3 {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .related_articles_container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+  
+  .related_articles_container .single_blog_post_card {
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 70px;
+  }
+  /**** (END) related posts ****/
+  
+  
+  
+  @media (max-width: 1024px) {
+    .all_single_post_wrap {
+      max-width: 1064px; /* add 20 paddings on both sides */
+    }
+    .post_container .post_title h1 {
+      font-size: 30px;
+    }
+  
+    .post_container .content .ECHB_p_section h2 {
+      font-size: 25px;
+    }
+    
+    .single_post_container {
+      flex-wrap: wrap;
+    }
+  
+    .single_post_container .post_container {
+      width: 100%;
+    }
+  } /* w1024 */
+  
+  
+  @media(max-width: 876px) {
+    .related_articles_container .single_blog_post_card {
+        width: 30%; 
+    }
+  } /* w876 */
+  
+  
+  @media (max-width: 767px) {
+    .all_single_post_wrap {
+      max-width: 807px; /* add 20 paddings on both sides */
+    }
+  
+    .post_container .content .ECHB_p_section h2 {
+      font-size: 25px;
+    }
+  } /* w767 */
+  
+  
+  @media(max-width: 650px) {
+    .related_articles_container .single_blog_post_card {
+        width: 100%; 
+    }
+  } /* w650 */
+  
+  
+  @media (max-width: 428px) {
+    .post_container .post_info {
+      flex-wrap: wrap;
+    }
+  
+    .post_container .post_info .post_tag {
+      width: 70%;
+    }
+  
+    .post_container .post_info .post_share {
+      width: 100%;
+    }
+  
+    .post_container .post_info .post_share a img {
+      width: 23px;
+    }
+  
+    .post_container .post_title h1 {
+      font-size: 25px;
+    }
+  
+    .post_container .content .ECHB_p_section h2 {
+      font-size: 20px;
+    }
+  } /* w428 */
+  
+  
+  
+  
+  
+  /*************** BRAND *****************/
+  .single_brand_container {
+    padding-bottom: 50px;
+  }
+  
+  .single_post_container .brand_container {
+    width: 20%;
+  }
+  
+  .single_post_container .brand_container .inner_brand_container {
+    width: 100%;
+    border-left: 1px solid #666;
+    padding-left: 20px;
+  }
+  
+  .single_post_container .brand_container .inner_brand_container p {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .single_brand_container .brand_img {
+    margin-bottom: 10px;
+  }
+  
+  .single_brand_container .brand_img img {
+    width: 330px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .single_brand_container .brand_name {
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #000;
+  }
+  
+  .single_brand_container .brand_learn_more a {
+    max-width: 200px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-family: "FuturaPT-Book", Sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 35px;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: block;
+    margin-top: 20px;
+  }
+  .single_brand_container .brand_learn_more a:hover {
+    background-color: #192744;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .single_brand_container .brand_img img {
+      height: 130px;
+    }
+  } /* w1200 */
+  
+  @media (max-width: 1024px) {
+    .single_post_container .brand_container {
+      width: 100%;
+    }
+    .single_post_container .brand_container {
+      margin-top: 50px;
+    }
+    .single_post_container .brand_container .inner_brand_container {
+      border-left: 0px;
+      padding-left: 0px;
+      padding-top: 20px;
+      border-top: 1px solid #666;
+    }
+  
+    .single_brand_container .brand_img img {
+      height: 200px;
+    }
+  } /* w1024 */
+  
+  @media (max-width: 428px) {
+    .single_brand_container .brand_img img {
+      width: 100%;
+    }
+  } /* w428 */
+  /*************** (END) BRAND *****************/
