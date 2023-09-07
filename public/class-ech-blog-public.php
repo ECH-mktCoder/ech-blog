@@ -312,9 +312,9 @@ class Ech_Blog_Public {
 	public function ECHB_getAPIDomain() {
 		$getAPIEnv = get_option('ech_blog_apply_api_env'); 
 		if ($getAPIEnv == 1) {
-			$domain = get_option('ech_blog_api_domain_live');
+			$domain = "https://globalcms-api.umhgp.com/";
 		} else {
-			$domain = get_option('ech_blog_api_domain_dev');
+			$domain = "https://globalcms-api-uat.umhgp.com";
 		}
 
 		return $domain;

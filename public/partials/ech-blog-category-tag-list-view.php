@@ -1,14 +1,10 @@
 <?php 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
 
 /**
  * Redirect to blog list page if no article_id is passed
  */
 if( (!isset($_GET['cate_id']) && !isset($_GET['tag_id'])) || (empty($_GET['cate_id']) && empty($_GET['tag_id'])) ) {
     echo '<script>window.location.replace("/health-blog");</script>';
-    exit;
 }
 
 global $wp;
@@ -51,7 +47,6 @@ $json_arr = json_decode($get_cate_tag_json, true);
  */
  if (!isset($json_arr['count']) || $json_arr['count'] == 0) {
     echo '<script>window.location.replace("/health-blog");</script>';  
-    exit;
 }
 
 

@@ -38,7 +38,7 @@ class Ech_Blog_Activator {
 		}
 
 		// set API LIVE domain
-		$getLIVEApiDomain = get_option( 'ech_blog_api_domain_live' );
+		/* $getLIVEApiDomain = get_option( 'ech_blog_api_domain_live' );
 		if(empty($getLIVEApiDomain) || !$getLIVEApiDomain ) {
 			add_option( 'ech_blog_api_domain_live', sanitize_url('https://globalcms-api.umhgp.com/') );
 		}
@@ -47,7 +47,7 @@ class Ech_Blog_Activator {
 		$getDEVApiDomain = get_option( 'ech_blog_api_domain_dev' );
 		if(empty($getDEVApiDomain) || !$getDEVApiDomain ) {
 			add_option( 'ech_blog_api_domain_dev', sanitize_url('https://globalcms-api-uat.umhgp.com') );
-		}
+		} */
 
 		// set post per page to 12
         $getPPP = get_option( 'ech_blog_ppp' );
@@ -70,7 +70,7 @@ class Ech_Blog_Activator {
 		// set default post featured image
         $getFeaturedImg = get_option( 'ech_blog_default_post_featured_img' );
         if(empty($getFeaturedImg) || !$getFeaturedImg ) {
-            add_option( 'ech_blog_default_post_featured_img', plugin_dir_url( __FILE__ ).'img/ec_logo.svg' );
+            add_option( 'ech_blog_default_post_featured_img', plugin_dir_url( dirname( __FILE__ ) ).'assets/img/ec_logo.svg' );
         }
 
 		// set breadcrumb status to 0 (disable)
@@ -87,15 +87,15 @@ class Ech_Blog_Activator {
 
 
 		// create VP 
-		self::createVP('Health Blog Content', 'health-blog-content', '[ech_blog_single_post_output]');
-        self::createVP('Health Blog Category Tag List', 'health-blog-category-tag-list', '[ech_blog_cate_tag_list_output]');	
+		self::ECHB_createVP('Health Blog Content', 'health-blog-content', '[ech_blog_single_post_output]');
+        self::ECHB_createVP('Health Blog Category Tag List', 'health-blog-category-tag-list', '[ech_blog_cate_tag_list_output]');	
 
-
+		
 	} // activate
 
 
 
-	private static function createVP($pageTitle, $pageSlug, $pageShortcode) {
+	private static function ECHB_createVP($pageTitle, $pageSlug, $pageShortcode) {
         if ( current_user_can( 'activate_plugins' ) ) {
 			// Get parent page and get its id
 			$get_parent_page = get_page_by_path('health-blog');
@@ -110,7 +110,7 @@ class Ech_Blog_Activator {
 				'post_parent' => $get_parent_page->ID
 			);
 	
-			wp_insert_post($v_page, true);
+			$vp_id = wp_insert_post($v_page, true);
 	
 		} else {
 			return;

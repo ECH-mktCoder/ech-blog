@@ -30,6 +30,7 @@
             <button id="copyShortcode">Copy Shortcode</button>
         </div>
 
+        <?=plugin_dir_url( dirname( __DIR__ ) )?>
 
         <div class="api_info_container">
             <p>Filter category IDs ( <?=$ADMIN_ECHB_func->ADMIN_ECHPL_get_env_status()?> )</p>
@@ -73,17 +74,6 @@
                 </select>
             </div>
             
-            <div class="form_row">
-                <?php $getApiDomainLIVE = get_option( 'ech_blog_api_domain_live' ); ?>
-                <label><strong>LIVE</strong> API Domain : </label>
-                <input type="url" name="ech_blog_api_domain_live" id="ech_blog_api_domain_live" value="<?=$getApiDomainLIVE?>">
-            </div>
-
-            <div class="form_row">
-                <?php $getApiDomainDEV = get_option( 'ech_blog_api_domain_dev' ); ?>
-                <label><strong>DEV</strong> API Domain : </label>
-                <input type="url" name="ech_blog_api_domain_dev" id="ech_blog_api_domain_dev" value="<?=$getApiDomainDEV?>">
-            </div>
 
             <div class="form_row">
                 <?php $getPPP = get_option( 'ech_blog_ppp' ); ?>

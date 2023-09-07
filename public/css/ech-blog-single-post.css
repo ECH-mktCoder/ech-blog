@@ -25,6 +25,15 @@
     .show_b_w1024 {
       display: block;
     }
+  } /* w1024 */
+
+
+  .entry-header .entry-title {
+    display: none;
+  }
+
+  .all_single_post_wrap a {
+    text-decoration: none;
   }
   
   /****** (END)COMMON ****/
@@ -35,6 +44,10 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0px 20px;
+  }
+
+  .ECHB_back_to_blog_list {
+    text-align: right;
   }
   
   .sp_breadcrumb {

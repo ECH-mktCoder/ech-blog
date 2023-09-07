@@ -1,11 +1,8 @@
 <?php 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
+
 
 if( !isset($_GET['article_id']) || !isset($_GET['post_version']) || empty($_GET['article_id']) || empty($_GET['post_version']) ) {
     echo '<script>window.location.replace("/health-blog");</script>';
-    exit;
 }
 
 global $wp;
@@ -36,8 +33,7 @@ $json_arr = json_decode($get_post_json, true);
 
 if (!isset($json_arr['result_code']) || $json_arr['result_code'] != 0) {
     echo '<script>window.location.replace("/health-blog");</script>';
-    exit;
-}
+} 
 
 
 

@@ -101,8 +101,6 @@ class Ech_Blog_Admin {
 	public function reg_ech_blog_settings() {
 		// Register all settings for general setting page
 		register_setting( 'ech_blog_settings', 'ech_blog_apply_api_env');
-		register_setting( 'ech_blog_settings', 'ech_blog_api_domain_live');
-		register_setting( 'ech_blog_settings', 'ech_blog_api_domain_dev');
 		register_setting( 'ech_blog_settings', 'ech_blog_ppp');
 		register_setting( 'ech_blog_settings', 'ech_blog_default_post_featured_img');
 		register_setting( 'ech_blog_settings', 'ech_blog_channel_id');
@@ -133,9 +131,9 @@ class Ech_Blog_Admin {
 	public function ADMIN_ECHB_getAPIDomain() {
 		$getAPIEnv = get_option('ech_blog_apply_api_env'); 
 		if ($getAPIEnv == 1) {
-			$domain = get_option('ech_blog_api_domain_live');
+			$domain = "https://globalcms-api.umhgp.com/";
 		} else {
-			$domain = get_option('ech_blog_api_domain_dev');
+			$domain = "https://globalcms-api-uat.umhgp.com";
 		}
 
 		return $domain;
