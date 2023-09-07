@@ -13,27 +13,16 @@
 			var validStatus = false;
 
 			/*** admin form validations ***/
-			//var domainNameLIVE = $('#ech_blog_settings_form #ech_blog_api_domain_live').val();
-			//var domainNameDEV = $('#ech_blog_settings_form #ech_blog_api_domain_dev').val();
 			var ppp = $('#ech_blog_settings_form #ech_blog_ppp').val();
 			var channelID = $('#ech_blog_settings_form #ech_blog_channel_id').val();
 			var brandID = $('#ech_blog_settings_form #ech_blog_brand_id').val();
 
-
-			//if ( domainNameLIVE == '' || domainNameDEV == '' || ppp == '' || channelID == '' || brandID == '' ) {
 			if ( ppp == '' || channelID == '' || brandID == '' ) {
 				validStatus = false;
 			} else {
 				validStatus = true;
 			}
 
-
- 			/* if ( domainNameLIVE  == '') {
-				statusMsg += 'LIVE API Domain Name cannot be empty<br>';
-			} 
-			if ( domainNameDEV  == '') {
-				statusMsg += 'DEV API Domain Name cannot be empty<br>';
-			}  */
 			if ( ppp == '') {
 				statusMsg += 'Post per page cannot be empty<br>';
 			}			
@@ -43,8 +32,6 @@
 			if ( brandID == '') {
 				statusMsg += 'Brand ID cannot be empty<br>';
 			}
-
-
 			/*** (end) admin form validations ***/
 
 			if ( !validStatus ) {
