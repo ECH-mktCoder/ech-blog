@@ -178,7 +178,7 @@ class Ech_Blog {
 	private function define_public_hooks() {
 
 		$plugin_public = new Ech_Blog_Public( $this->get_plugin_name(), $this->get_version() );
-		$virtual_page_public = new Ech_Blog_Virtual_Pages();
+		$virtual_page_public = new Ech_Blog_Virtual_Pages( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -196,6 +196,10 @@ class Ech_Blog {
 		$this->loader->add_shortcode( 'ech_blog', $plugin_public, 'ech_blog_func');
 		$this->loader->add_shortcode( 'ech_blog_single_post_output', $virtual_page_public, 'ech_blog_single_post_output');
 		$this->loader->add_shortcode( 'ech_blog_cate_tag_list_output', $virtual_page_public, 'ech_blog_cate_tag_list_output');
+
+
+		// ^^^ Create VP after WordPress has finished loading, but before any headers are sent
+		$this->loader->add_action('init', $virtual_page_public, 'ECHB_createVP' );
 
 	}
 

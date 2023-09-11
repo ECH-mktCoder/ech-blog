@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -58,6 +57,20 @@ function deactivate_ech_blog() {
 register_activation_hook( __FILE__, 'activate_ech_blog' );
 register_deactivation_hook( __FILE__, 'deactivate_ech_blog' );
 
+
+
+
+/****************************************
+ * Create an option "run_init_createVP" once plugin is activated
+ ****************************************/
+function activate_initialize_createVP() {
+	require_once plugin_dir_path( __FILE__ ) . 'public/class-ech-blog-virtual-pages.php';
+	Ech_Blog_Virtual_Pages::initialize_createVP();
+}
+register_activation_hook( __FILE__, 'activate_initialize_createVP' );
+
+
+
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
@@ -77,9 +90,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-ech-blog.php';
  * @since    1.0.0
  */
 function run_ech_blog() {
-
 	$plugin = new Ech_Blog();
 	$plugin->run();
-
 }
 run_ech_blog();

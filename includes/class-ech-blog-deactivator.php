@@ -30,13 +30,13 @@ class Ech_Blog_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		
 		$pageSinglePost = get_page_by_path( 'health-blog/health-blog-content' );
     	wp_delete_post($pageSinglePost->ID);
 
 		$pageBlogCateTagList = get_page_by_path( 'health-blog/health-blog-category-tag-list' );
     	wp_delete_post($pageBlogCateTagList->ID);
-
+		
 	}
 
 }

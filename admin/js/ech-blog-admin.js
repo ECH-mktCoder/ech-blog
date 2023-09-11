@@ -17,6 +17,8 @@
 			var channelID = $('#ech_blog_settings_form #ech_blog_channel_id').val();
 			var brandID = $('#ech_blog_settings_form #ech_blog_brand_id').val();
 
+
+
 			if ( ppp == '' || channelID == '' || brandID == '' ) {
 				validStatus = false;
 			} else {
@@ -32,6 +34,8 @@
 			if ( brandID == '') {
 				statusMsg += 'Brand ID cannot be empty<br>';
 			}
+
+
 			/*** (end) admin form validations ***/
 
 			if ( !validStatus ) {

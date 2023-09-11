@@ -37,18 +37,6 @@ class Ech_Blog_Activator {
 			add_option( 'ech_blog_apply_api_env', 1 );
 		}
 
-		// set API LIVE domain
-		/* $getLIVEApiDomain = get_option( 'ech_blog_api_domain_live' );
-		if(empty($getLIVEApiDomain) || !$getLIVEApiDomain ) {
-			add_option( 'ech_blog_api_domain_live', sanitize_url('https://globalcms-api.umhgp.com/') );
-		}
-
-		// set API DEV domain
-		$getDEVApiDomain = get_option( 'ech_blog_api_domain_dev' );
-		if(empty($getDEVApiDomain) || !$getDEVApiDomain ) {
-			add_option( 'ech_blog_api_domain_dev', sanitize_url('https://globalcms-api-uat.umhgp.com') );
-		} */
-
 		// set post per page to 12
         $getPPP = get_option( 'ech_blog_ppp' );
         if(empty($getPPP) || !$getPPP ) {
@@ -84,38 +72,12 @@ class Ech_Blog_Activator {
 		if(empty($getSPBrandSectionStatus) || !$getSPBrandSectionStatus ) {
             add_option( 'ech_blog_enable_single_post_brand_section', 0 );
         }
-
-
-		// create VP 
-		self::ECHB_createVP('Health Blog Content', 'health-blog-content', '[ech_blog_single_post_output]');
-        self::ECHB_createVP('Health Blog Category Tag List', 'health-blog-category-tag-list', '[ech_blog_cate_tag_list_output]');	
-
 		
 	} // activate
 
 
 
-	private static function ECHB_createVP($pageTitle, $pageSlug, $pageShortcode) {
-        if ( current_user_can( 'activate_plugins' ) ) {
-			// Get parent page and get its id
-			$get_parent_page = get_page_by_path('health-blog');
 	
-			$v_page = array(
-				'post_type' => 'page',
-				'post_title' => $pageTitle,
-				'post_name' => $pageSlug,
-				'post_content' => $pageShortcode,  // shortcode from this plugin
-				'post_status' => 'publish',
-				'post_author' => get_current_user_id(),
-				'post_parent' => $get_parent_page->ID
-			);
-	
-			$vp_id = wp_insert_post($v_page, true);
-	
-		} else {
-			return;
-		}
-    } // createVP
 
 
 }
