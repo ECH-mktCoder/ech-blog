@@ -2,11 +2,6 @@
 	'use strict';
 	$(function () {
 
-		// run when in health-blog page, skip when in health-blog-category-tag-list and health-blog-content page
-		if (window.location.href.indexOf("health-blog") > -1 && window.location.href.indexOf("health-blog-category-tag-list") == -1 && window.location.href.indexOf("health-blog-content") == -1 ) {
-			getFilteredBlogPosts();
-		}
-
 		$('.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container .D_cate_filter').on('click', function(){
 		  $('.ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container .active').removeClass('active');
 		  $(this).addClass('active');

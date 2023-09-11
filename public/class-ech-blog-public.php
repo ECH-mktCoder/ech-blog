@@ -97,8 +97,10 @@ class Ech_Blog_Public
 	{
 
 		if (strpos($_SERVER['REQUEST_URI'], "health-blog") !== false) {
-			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
-			wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);
+			if (count(explode('/', $_SERVER['REQUEST_URI'])) == 3) {
+				wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
+				wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);
+			}
 		}
 	}
 
@@ -130,11 +132,23 @@ class Ech_Blog_Public
 		$brand_id = get_option('ech_blog_brand_id');
 
 
-		$api_args = array(
-			'page_size' => $ppp,
-			'channel_id' => $channel_id,
-			'brand_id' => $brand_id
-		);
+		// check if specific category filters are set. If yes, get the first category articles
+		if ( trim(get_option('ech_blog_category_filter')) == '' ) {
+			$api_args = array(
+				'page_size' => $ppp,
+				'channel_id' => $channel_id,
+				'brand_id' => $brand_id
+			);
+		} else {
+			$filterCateArr = explode(',', get_option('ech_blog_category_filter'));
+			$api_args = array(
+				'page_size' => $ppp,
+				'channel_id' => $channel_id,
+				'brand_id' => $brand_id,
+				'cate_id' => $filterCateArr[0]
+			);
+		}
+		
 
 		$api_link = $this->ECHB_gen_blog_link_api_link($api_args);
 

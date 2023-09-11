@@ -38,8 +38,6 @@ if (!isset($json_arr['result_code']) || $json_arr['result_code'] != 0) {
 
 
 
-
-
 /*********************************************************
  * Meta Data Conditions on unrelated brand articles
  *  - disable Google indexing
