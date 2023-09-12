@@ -10,19 +10,19 @@ class Ech_Blog_Virtual_Pages extends Ech_Blog_Public {
      * (folder: includes/class-ech-blog.php)
      * initialize_createVP() fires after WordPress has finished loading, but before any headers are sent.
      ************************************************************************/
-    public static function initialize_createVP() {
+    public static function ECHB_initialize_createVP() {
         // add an option to make use ECHB_setupVP is triggered once per VP. Delete this option once all VP are created.
-        add_option('run_init_createVP', 1);
+        add_option('ECHB_run_init_createVP', 1);
     }
 
 
     public function ECHB_createVP() {
-        if (get_option('run_init_createVP') == 1) {
+        if (get_option('ECHB_run_init_createVP') == 1) {
         $this->ECHB_setupVP('Health Blog Content', 'health-blog-content', '[ech_blog_single_post_output]');
         $this->ECHB_setupVP('Health Blog Category Tag List', 'health-blog-category-tag-list', '[ech_blog_cate_tag_list_output]');
 
         // Delete this option once all VP are created.
-        delete_option('run_init_createVP');
+        delete_option('ECHB_run_init_createVP');
         }
     }
 
@@ -49,7 +49,7 @@ class Ech_Blog_Virtual_Pages extends Ech_Blog_Public {
     /******************************** VP SHORTCODE ********************************/
 
     public function ech_blog_single_post_output($atts) {
-        if (!get_option('run_init_createVP')) {
+        if (!get_option('ECHB_run_init_createVP')) {
             global $wp;
 
             $atts = shortcode_atts(array(
@@ -275,7 +275,7 @@ class Ech_Blog_Virtual_Pages extends Ech_Blog_Public {
             
 
             return $html;
-        } // if run_init_createVP
+        } // if ECHB_run_init_createVP
     }  //--end ech_blog_single_post_output()
 
 
@@ -283,10 +283,8 @@ class Ech_Blog_Virtual_Pages extends Ech_Blog_Public {
 
 
     public function ech_blog_cate_tag_list_output($atts) {
-        /* if (!get_option('run_init_createVP')) {
-        include('partials/ech-blog-category-tag-list-view.php');
-        } */
-        if (!get_option('run_init_createVP')) {
+
+        if (!get_option('ECHB_run_init_createVP')) {
 
             $atts = shortcode_atts(array(
                 'cate_id'    => isset($_GET['cate_id']) ? sanitize_key($_GET['cate_id']) : '',
