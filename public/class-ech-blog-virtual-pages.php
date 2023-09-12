@@ -3,9 +3,7 @@
 class Ech_Blog_Virtual_Pages extends Ech_Blog_Public {
 
 
-    public function __construct() {
-        add_action('template_redirect', 'ECHB_redirection');
-    }
+
     /************************************************************************
      * To avoid the error "generated X characters of unexpected output" ocurred during plugin activation, 
      * initialize_createVP function is called in define_public_hooks, add_action('init')
