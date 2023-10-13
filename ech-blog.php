@@ -63,11 +63,11 @@ register_deactivation_hook( __FILE__, 'deactivate_ech_blog' );
 /****************************************
  * Create an option "run_init_createVP" once plugin is activated
  ****************************************/
-function ECHB_activate_initialize_createVP() {
+function activate_initialize_createVP() {
 	require_once plugin_dir_path( __FILE__ ) . 'public/class-ech-blog-virtual-pages.php';
-	Ech_Blog_Virtual_Pages::ECHB_initialize_createVP();
+	Ech_Blog_Virtual_Pages::initialize_createVP();
 }
-register_activation_hook( __FILE__, 'ECHB_activate_initialize_createVP' );
+register_activation_hook( __FILE__, 'activate_initialize_createVP' );
 
 
 

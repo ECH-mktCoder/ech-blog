@@ -161,6 +161,10 @@
     font-family: "FuturaPT-Book",Sans-serif;
 }
 
+.single_blog_post_card .post_tag .echb_tag a,
+.single_post_container .post_info .post_tag .echb_tag a {
+    color: #3434d8;
+}
 
 @media(max-width: 1024px) {
     .ech_blog_big_wrap .ech_blog_filter_container .D_categories_filter_container {

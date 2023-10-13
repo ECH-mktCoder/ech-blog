@@ -97,10 +97,10 @@ class Ech_Blog_Public
 	{
 
 		if (strpos($_SERVER['REQUEST_URI'], "health-blog") !== false) {
-			//if (count(explode('/', $_SERVER['REQUEST_URI'])) == 3) {}
-			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
-
-			wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);
+			if (count(explode('/', $_SERVER['REQUEST_URI'])) == 3) {
+				wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
+				wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);
+			}
 		}
 	}
 
@@ -652,10 +652,12 @@ class Ech_Blog_Public
 		foreach ($langArr as $itemArr) {
 			if ($itemArr['type'] == 'tag') {
 				$type = 'tag_id=';
+				$commaList .= $prefix . '<span class="echb_tag"><a href="' . site_url() . '/health-blog/health-blog-category-tag-list/?brand_id=' . $scAttr_brand_id . '&' . $type . $itemArr['tag_id'] . '">#' . $itemArr['tag_name'] . '</a></span>';
 			} else {
 				$type = 'cate_id=';
+				$commaList .= $prefix . '<a href="' . site_url() . '/health-blog/health-blog-category-tag-list/?brand_id=' . $scAttr_brand_id . '&' . $type . $itemArr['tag_id'] . '">' . $itemArr['tag_name'] . '</a>';
 			}
-			$commaList .= $prefix . '<a href="' . site_url() . '/health-blog/health-blog-category-tag-list/?brand_id=' . $scAttr_brand_id . '&' . $type . $itemArr['tag_id'] . '">' . $itemArr['tag_name'] . '</a>';
+			
 			$prefix = ", ";
 		}
 
