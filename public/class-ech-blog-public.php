@@ -97,10 +97,8 @@ class Ech_Blog_Public
 	{
 
 		if (strpos($_SERVER['REQUEST_URI'], "health-blog") !== false) {
-			if (count(explode('/', $_SERVER['REQUEST_URI'])) == 3) {
-				wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
-				wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);
-			}
+			wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/ech-blog-public.js', array('jquery'), $this->version, false);
+			wp_enqueue_script($this->plugin_name . '_pagination', plugin_dir_url(__FILE__) . 'js/ech-blog-pagination.js', array('jquery'), $this->version, false);			
 		}
 	}
 
