@@ -184,7 +184,7 @@ $contentSC = $plugin_public->ECHB_sortContentArr($contentSC);
                                     <div class="dr_name"><?= $plugin_public->ECHB_echolang([$dr_nameEN, $dr_nameZH, $dr_nameSC]) ?></div>
                                     <div class="dr_field"><?= $plugin_public->ECHB_echolang([implode(', ', $spArrEN), implode(', ', $spArrZH), implode(', ', $spArrSC)]); ?> </div> <!-- dr_field -->
                                     <?php if ($post['tc_blog_url'] != '') : ?>
-                                        <div class="dr_booking"><a href="<?= $plugin_public->ECHB_echolang([$post['en_blog_url'], $post['tc_blog_url'], $post['cn_blog_url']]) ?>" target="_blank"><?= $plugin_public->ECHB_echolang(['Book Appointment', '預約醫生', '预约医生']) ?></a></div>
+                                        <div class="dr_booking"><a href="<?= $plugin_public->ECHB_echolang([$post['en_blog_url'], $post['tc_blog_url'], $post['cn_blog_url']]) ?>" target="_blank"><?= $plugin_public->ECHB_echolang(['Book Appointment', '預約', '预约']) ?></a></div>
                                     <?php endif; ?>
                                 </div>
                             </div> <!-- dr_source -->
